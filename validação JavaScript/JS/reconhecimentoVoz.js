@@ -16,4 +16,6 @@ function exibirChute(chute){
 function onSpeak(evento){
     chute = evento.results[0] [0].transcript              // puxar somente o reconhecimento de voz 
     exibirChute(chute)
+    verificaSeOChutePossuiUmValorValido(chute)
 }
+recognition.addEventListener('end', ()=> recognition.start())
